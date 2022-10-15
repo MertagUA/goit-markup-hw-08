@@ -113,7 +113,7 @@
     }
     @include desktop{
         min-width: 528px;
-        min-height: 581px;
+        max-height: 581px;
     }
 }
 
@@ -249,7 +249,7 @@
 
     margin-right: 4px;
     border: 2px solid var(--title-text-color);
-    border-radius: 2px;
+    border-radius: 2px;;
 }
 
 .checkbox__input:checked+.checkbox__wrap {

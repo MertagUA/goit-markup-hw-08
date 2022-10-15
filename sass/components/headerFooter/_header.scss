@@ -33,20 +33,23 @@
         height: 80px;
     }
 }
+.header__container .logo{
+    @include tablet {
+            margin-right: 88px;
+            padding: 26px 0;
+        }
+    
+        @include desktop {
+            margin-right: 93px;
+            padding-top: 24px;
+            padding-bottom: 25px;
+            @include font(26px, 700, 1.19);
+        }
+}
 .logo{
     font-family: 'Raleway', sans-serif;
     font-family: 'Raleway';
     @include font(24px, 700, 1.17);
-    @include tablet{
-        margin-right: 88px;
-        padding: 26px 0;
-    }
-    @include desktop{
-        margin-right: 93px;
-        padding-top: 24px;
-        padding-bottom: 25px;
-        @include font(26px, 700, 1.19);
-    }
 }
 .logo__part--accent {
     color: var(--acent-color);
@@ -94,6 +97,12 @@
 
         background-color: var(--acent-color);
     }
+    &:hover,
+    &:focus {
+        color: var(--acent-color);
+    
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 .current {
     color: var(--acent-color);
@@ -138,25 +147,39 @@
         padding-bottom: 32px;
     }
 }
+.contact__link--phone:hover,
+.contact__link--phone:focus-within {
+    fill: var(--acent-color);
+    color: var(--acent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact__link--envelope:hover,
+.contact__link--envelope:focus {
+    fill: var(--acent-color);
+    color: var(--acent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contact__icon {
     fill: currentColor;
     &--envelope {
             width: 14px;
             height: 10px;
         }
-    
         &--phone {
             width: 10px;
             height: 14px;
         }
     @include desktop{
-        margin-right: 10px;
         &--envelope {
+                margin-right: 10px;
                 width: 16px;
                 height: 12px;
             }
         
             &--phone {
+                margin-right: 10px;
                 width: 10px;
                 height: 16px;
             }
@@ -165,12 +188,6 @@
 // &:last-child {
 //     margin-right: 0;
 // }
-// }
-// &:hover,
-// &:focus {
-//     color: var(--acent-color);
-
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 // }
 
 // /*contact */
@@ -182,13 +199,6 @@
 
 //     color: var(--primary-text-color);
 //     fill: #757575;
-
-// &:hover,
-// &:focus {
-//     color: var(--acent-color);
-
-//     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
 // }
 @media screen and (max-width: 767px) {
     .nav {

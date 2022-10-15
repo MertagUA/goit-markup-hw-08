@@ -24,3 +24,14 @@
         @content;
     }
 }
+@mixin mobileOnly {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin TabletOnly {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}

@@ -5,19 +5,51 @@
 .team__title {
     margin-bottom: 50px;
 
-    @include font(36px, 700, 1.17);
+    @include font(28px, 700, 1.18);
     text-align: center;
 
     color: var(--title-text-color);
+    @include desktop{
+        @include font(36px, 700, 1.17);
+    }
 }
+.team__item {
+    width: 450px;
+    height: 622px;
+    @include mobileOnly{
+        margin-bottom: 30px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 
+    @include tablet {
+        width: 354px;
+        height: 536px;
+    }
+
+    @include desktop {
+        width: 270px;
+        height: 428px;
+    }
+
+    background-color: var(--primary-white-color);
+}
 .team__list {
-    display: flex;
-
+    gap: 30px;
     text-align: center;
+    @include tablet {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    @include desktop{
+        flex-wrap: nowrap;
+    }
 }
 
 .card {
+    padding-bottom: 24px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -31,26 +63,26 @@
 }
 
 .card__text {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 
     font-size: 16px;
     line-height: 1.19;
 }
 
 .card__image {
+    width: 450px;
+    height: 460px;
     display: block;
 
     margin-bottom: 30px;
-}
-
-.team__item {
-    margin-right: 30px;
-
-    background-color: var(--primary-white-color);
-
-&:last-child {
-    margin-right: 0;
-}
+    @include tablet{
+        width: 354px;
+        height: 374px;
+    }
+    @include desktop{
+        width: 270px;
+        height: 260px;
+    }
 }
 
 .card__list {
@@ -63,7 +95,6 @@
     height: 44px;
 
     border-radius: 50%;
-    margin-bottom: 30px;
     margin-right: 10px;
     padding: 12px;
 
