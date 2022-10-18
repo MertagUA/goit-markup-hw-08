@@ -30,8 +30,8 @@
           </svg>
         </button>
         <ul class="menu__list list">
-          <li class="menu__item"><a href="" class="menu__link link">Студія</a></li>
-          <li class="menu__item"><a href="" class="menu__link link">Портфоліо</a></li>
+          <li class="menu__item"><a href="" class="menu__link link current">Студія</a></li>
+          <li class="menu__item"><a href="./portfolio.html" class="menu__link link">Портфоліо</a></li>
           <li class="menu__item"><a href="" class="menu__link link">Контакти</a></li>
         </ul>
         <div class="menu__wrap">
@@ -157,36 +157,44 @@
       <div class="container">
         <ul class="benefits__list list">
           <li class="benefits__item">
-            <svg class="benefits__icon">
-              <use href="./images/icons.svg#antenna"></use>
-            </svg>
+            <div class="benefits__wrap">
+              <svg class="benefits__icon" width="70" height="70">
+                <use href="./images/icons.svg#antenna"></use>
+              </svg>
+            </div>
             <h3 class="benefits__title">Увага до деталей</h3>
             <p class="benefits__text">
               Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
             </p>
           </li>
           <li class="benefits__item">
-            <svg class="benefits__icon">
-              <use href="./images/icons.svg#clock"></use>
-            </svg>
+            <div class="benefits__wrap">
+              <svg class="benefits__icon" width="70" height="70">
+                <use href="./images/icons.svg#clock"></use>
+              </svg>
+            </div>
             <h3 class="benefits__title">Пунктуальність</h3>
             <p class="benefits__text">
               Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
             </p>
           </li>
           <li class="benefits__item">
-            <svg class="benefits__icon">
-              <use href="./images/icons.svg#graph"></use>
-            </svg>
+            <div class="benefits__wrap">
+              <svg class="benefits__icon" width="70" height="70">
+                <use href="./images/icons.svg#graph"></use>
+              </svg>
+            </div>
             <h3 class="benefits__title">Планування</h3>
             <p class="benefits__text">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
           <li class="benefits__item">
-            <svg class="benefits__icon">
-              <use href="./images/icons.svg#astronaut"></use>
-            </svg>
+            <div class="benefits__wrap">
+              <svg class="benefits__icon" width="70" height="70">
+                <use href="./images/icons.svg#astronaut"></use>
+              </svg>
+            </div>
             <h3 class="benefits__title">Сучасні технології</h3>
             <p class="benefits__text">
               Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -219,45 +227,51 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list list">
           <li class="team__item">
-            <div class="card">
-              <img src="./images/img4.jpg" alt="Член команди" class="card__image" />
-              <h3 class="card__title">Ігор Дем'яненко</h3>
-              <p lang="en" class="card__text">Product Designer</p>
-              <ul class="card__list list">
-                <li class="card__item">
-                  <a class="card__link" href="" aria-label="instagram">
-                    <svg class="card__icon" width="20" height="20">
-                      <use href="./images/icons.svg#instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="card__item">
-                  <a class="card__link" href="" aria-label="twitter">
-                    <svg class="card__icon" width="20" height="20">
-                      <use href="./images/icons.svg#twitter"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="card__item">
-                  <a class="card__link" href="" aria-label="facebook">
-                    <svg class="card__icon" width="20" height="20">
-                      <use href="./images/icons.svg#facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="card__item">
-                  <a class="card__link" href="" aria-label="linkedin">
-                    <svg class="card__icon" width="20" height="20">
-                      <use href="./images/icons.svg#linkedin"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <picture>
+              <source srcset="./images/img4_450.jpg 1x, ./images/img4_450x2.jpg 2x," type="image/jpeg"
+                media="(max-width: 767px)" />
+              <img class="card__image" src="./images/img4_450.jpg" alt="Член команди" />
+            </picture>
+            <h3 class="card__title">Ігор Дем'яненко</h3>
+            <p lang="en" class="card__text">Product Designer</p>
+            <ul class="card__list list">
+              <li class="card__item">
+                <a class="card__link" href="" aria-label="instagram">
+                  <svg class="card__icon" width="20" height="20">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="card__item">
+                <a class="card__link" href="" aria-label="twitter">
+                  <svg class="card__icon" width="20" height="20">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="card__item">
+                <a class="card__link" href="" aria-label="facebook">
+                  <svg class="card__icon" width="20" height="20">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="card__item">
+                <a class="card__link" href="" aria-label="linkedin">
+                  <svg class="card__icon" width="20" height="20">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="team__item">
             <div class="card">
-              <img src="./images/img5.jpg" alt="Член команди" class="card__image" />
+              <picture>
+                <source srcset="./images/img5_450.jpg 1x, ./images/img5_450x2.jpg 2x," type="image/jpeg"
+                  media="(max-width: 767px)" />
+                <img class="card__image" src="./images/img5_450.jpg" alt="Член команди" />
+              </picture>
               <h3 class="card__title">Ольга Рєпіна</h3>
               <p lang="en" class="card__text">Frontend Developer</p>
               <ul class="card__list list">
@@ -294,7 +308,11 @@
           </li>
           <li class="team__item">
             <div class="card">
-              <img src="./images/img6.jpg" alt="Член команди" class="card__image" />
+              <picture>
+                <source srcset="./images/img6_450.jpg 1x, ./images/img6_450x2.jpg 2x," type="image/jpeg"
+                  media="(max-width: 767px)" />
+                <img class="card__image" src="./images/img6_450.jpg" alt="Член команди" />
+              </picture>
               <h3 class="card__title">Микола Тарасов</h3>
               <p lang="en" class="card__text">Marketing</p>
               <ul class="card__list list">
@@ -331,7 +349,11 @@
           </li>
           <li class="team__item">
             <div class="card">
-              <img src="./images/img7.jpg" alt="Член команди" class="card__image" />
+              <picture>
+                <source srcset="./images/img7_450.jpg 1x, ./images/img7_450x2.jpg 2x," type="image/jpeg"
+                  media="(max-width: 767px)" />
+                <img class="card__image" src="./images/img7_450.jpg" alt="Член команди" />
+              </picture>
               <h3 class="card__title">Михайло Єрмаков</h3>
               <p lang="en" class="card__text">UI Designer</p>
               <ul class="card__list list">

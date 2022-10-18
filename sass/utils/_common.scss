@@ -62,3 +62,10 @@ p {
     padding-bottom: 94px;
   }
 }
+.no-scroll{
+  overflow: hidden;
+}
+img{
+  display: block;
+  max-width: 100%;
+}

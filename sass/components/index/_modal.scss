@@ -54,7 +54,6 @@
 
     width: 200px;
     height: 50px;
-    margin-bottom: 40px;
     padding: 10px 52px;
 
     @include font(16px, 700, 1.88);
@@ -84,6 +83,11 @@
 
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 320px) and (max-width:767px){
+        padding: 93px 15px;
+        overflow-y: scroll;
+    }
 }
 
 .backdrop.is-hidden {
@@ -97,28 +101,32 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 450px;
-    min-height: 609px;
+    position: relative;
+    padding: 40px;
     background-color: var(--primary-white-color);
-    
-    transform: scale(1) translate(-50%, -50%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    max-width: 450px;
+    width: 100%;
+    min-height: 609px;
+    margin-right: auto;
+    margin-left: auto;
     @include tablet{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: scale(1) translate(-50%, -50%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         width: 450px;
         height: 609px;
     }
     @include desktop{
-        min-width: 528px;
-        max-height: 581px;
+        max-width: 528px;
+        width: 100%;
+        min-height: 581px;
     }
 }
 
 .modal__title {
-    margin: 40px 40px 12px 40px;
+    margin-bottom: 12px;
 
     @include font(20px, 700, 1.5);
     text-align: center;
@@ -127,8 +135,8 @@
 }
 
 .form {
-    width: 370px;
-    margin: 0 40px;
+    display: block;
+    max-width: 370px;
     margin-bottom: 20px;
     @include desktop{
         width: 448px;
@@ -222,15 +230,15 @@
 
 .form__link {
     color: var(--acent-color);
+    font-size: 12px;
+    line-height: 1.17px;
 }
 .form__checkbox {
-    min-width: 370px;
-    height: 15px;
-    margin-left: 40px;
-    margin-right: 38px;
+    max-width: 370px;
     margin-bottom: 30px;
 }
 .checkbox__label {
+    max-width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -247,7 +255,7 @@
     width: 16px;
     height: 15px;
 
-    margin-right: 4px;
+    margin-right: 2px;
     border: 2px solid var(--title-text-color);
     border-radius: 2px;;
 }
@@ -259,8 +267,11 @@
 }
 
 .checkbox__text {
+    display: flex;
+    justify-content: center;
     font-size: 12px;
     line-height: 1.17px;
+    display: block;
 
     @include desktop{
         font-size: 14px;
