@@ -136,8 +136,10 @@
 
 .form {
     display: block;
-    max-width: 370px;
-    margin-bottom: 20px;
+    @media screen and (max-width: 1199px) {
+        max-width: 370px;
+    }
+    margin-bottom: 30px;
     @include desktop{
         width: 448px;
     }
@@ -195,6 +197,7 @@
 .form__field--textarea {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 
 }
 
@@ -228,22 +231,37 @@
 }
 }
 
-.form__link {
+.checkbox___link {
+    @media screen and (max-width: 479px) {
+        display: none;
+    }
+    display: block;
     color: var(--acent-color);
-    font-size: 12px;
     line-height: 1.17px;
+    font-size: 12px;
 }
-.form__checkbox {
-    max-width: 370px;
-    margin-bottom: 30px;
+.checkbox__link--mobile{
+    @media screen and (min-width: 480px) {
+            display: none;
+        }
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 1.17;
+        color: var(--acent-color);
 }
 .checkbox__label {
-    max-width: 370px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    @include desktop{
+    @media screen and(max-width: 1199px) {
+        max-width: 370px;
+    }
+    @media screen and (min-width: 480){
+        margin-bottom: 30px;
+    }
+    @include desktop {
         width: 425px;
     }
 }
@@ -255,11 +273,10 @@
     width: 16px;
     height: 15px;
 
-    margin-right: 2px;
+    margin-right: 5px;
     border: 2px solid var(--title-text-color);
     border-radius: 2px;;
 }
-
 .checkbox__input:checked+.checkbox__wrap {
     background-color: var(--acent-color);
     border: 2px solid var(--acent-color);
@@ -269,10 +286,8 @@
 .checkbox__text {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 12px;
-    line-height: 1.17px;
-    display: block;
-
     @include desktop{
         font-size: 14px;
         line-height: 1.71;

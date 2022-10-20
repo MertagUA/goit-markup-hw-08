@@ -51,7 +51,9 @@
     }
 }
 .footer__item--primary {
-    margin-bottom: 60px;
+    @media screen and (max-width: 767px){
+        margin-bottom: 60px;
+    }
     @include tablet{
         margin-left: 74px;;
     }
@@ -61,9 +63,11 @@
     }
 }
 .footer__item--secondary {
-    margin-bottom: 60px;
-    &:last-child{
-        margin-bottom: 0;
+    @media screen and (max-width: 767px) {
+            margin-bottom: 60px;
+            &:last-child {
+                    margin-bottom: 0;
+            }
     }
     @include tablet {
             margin-left: 135px;
@@ -71,7 +75,6 @@
     }
     @include desktop{
         margin-left: 0;
-        margin-top: 12px;
         margin-right: 93px;
         &:last-child {
                 margin-right: 0;
