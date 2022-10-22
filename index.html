@@ -120,6 +120,7 @@
               </div>
             </label>
 
+
             <label class="form__field">
               <span class="form__label">Пошта</span>
               <div class="form__wrap">
@@ -228,8 +229,12 @@
         <ul class="team__list list">
           <li class="team__item">
             <picture>
-              <source srcset="./images/img4_450.jpg 1x, ./images/img4_450x2.jpg 2x," type="image/jpeg"
-                media="(max-width: 767px)" />
+              <source srcset="./images/img4_270.jpg 1x, ./images/img4_270b.jpg 2x" media="(min-width: 1200px)" />
+
+              <source srcset="./images/img4_354.jpg 1x, ./images/img4_354b.jpg 2x" media="(min-width: 768px)" />
+
+              <source srcset="./images/img4_450.jpg 1x, ./images/img4_450b.jpg 2x" media="(max-width: 767px)" />
+
               <img class="card__image" src="./images/img4_450.jpg" alt="Член команди" />
             </picture>
             <h3 class="card__title">Ігор Дем'яненко</h3>
@@ -268,8 +273,12 @@
           <li class="team__item">
             <div class="card">
               <picture>
-                <source srcset="./images/img5_450.jpg 1x, ./images/img5_450x2.jpg 2x," type="image/jpeg"
-                  media="(max-width: 767px)" />
+                <source srcset="./images/img5_270.jpg 1x, ./images/img5_270b.jpg 2x" media="(min-width: 1200px)" />
+
+                <source srcset="./images/img5_354.jpg 1x, ./images/img5_354b.jpg 2x" media="(min-width: 768px)" />
+
+                <source srcset="./images/img5_450.jpg 1x, ./images/img5_450b.jpg 2x" media="(max-width: 767px)" />
+
                 <img class="card__image" src="./images/img5_450.jpg" alt="Член команди" />
               </picture>
               <h3 class="card__title">Ольга Рєпіна</h3>
@@ -309,8 +318,12 @@
           <li class="team__item">
             <div class="card">
               <picture>
-                <source srcset="./images/img6_450.jpg 1x, ./images/img6_450x2.jpg 2x," type="image/jpeg"
-                  media="(max-width: 767px)" />
+                <source srcset="./images/img6_270.jpg 1x, ./images/img6_270b.jpg 2x" media="(min-width: 1200px)" />
+
+                <source srcset="./images/img6_354.jpg 1x, ./images/img6_354b.jpg 2x" media="(min-width: 768px)" />
+
+                <source srcset="./images/img6_450.jpg 1x, ./images/img6_450b.jpg 2x" media="(max-width: 767px)" />
+
                 <img class="card__image" src="./images/img6_450.jpg" alt="Член команди" />
               </picture>
               <h3 class="card__title">Микола Тарасов</h3>
@@ -350,8 +363,12 @@
           <li class="team__item">
             <div class="card">
               <picture>
-                <source srcset="./images/img7_450.jpg 1x, ./images/img7_450x2.jpg 2x," type="image/jpeg"
-                  media="(max-width: 767px)" />
+                <source srcset="./images/img7_270.jpg 1x, ./images/img7_270b.jpg 2x," media="(min-width: 1200px)" />
+
+                <source srcset="./images/img7_354.jpg 1x, ./images/img7_354b.jpg 2x," media="(min-width: 768px)" />
+
+                <source srcset="./images/img7_450.jpg 1x, ./images/img7_450b.jpg 2x" media="(max-width: 767px)" />
+
                 <img class="card__image" src="./images/img7_450.jpg" alt="Член команди" />
               </picture>
               <h3 class="card__title">Михайло Єрмаков</h3>
@@ -487,6 +504,72 @@
           </ul>
         </li>
         <li class="footer__item--secondary">
+          <p class="footer__text">Підпишіться на розсилку</p>
+          <div class="form__wrap--footer">
+            <form class="form__footer">
+              <label class="form__field--footer">
+                <input type="email" name="email" placeholder="E-mail" class="form__input--footer" />
+              </label>
+            </form>
+            <div class="form__button--wrap">
+              <button type="submit" class="form__button">
+                Підписатися
+                <svg class="form__icon--footer" width="24" height="24">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="footer__list--tablet list">
+        <li class="footer__item--tablet">
+          <ul class="tablet__list list">
+            <li class="tablet__item">
+              <a href="./index.html" class="logo link"><span class="logo__part--accent">Web</span><span
+                  class="logo__lower">Studio</span></a>
+              <address class="address">
+                <span class="address__text">м. Київ, пр-т Лесі Українки, 26</span><br />
+                <a href="mailto:info@devstudio.com" class="address__link link">info@devstudio.com</a><br />
+                <a href="tel:+380961111111" class="address__link link">+38 096 111 11 11</a>
+              </address>
+            </li>
+            <li class="tablet__item">
+              <p class="footer__text">Приєднуйтесь</p>
+              <ul class="card__list list">
+                <li class="card__item--black">
+                  <a class="card__link--white link" href="" aria-label="instagram">
+                    <svg class="card__icon" width="20" height="20">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="card__item--black">
+                  <a class="card__link--white link" href="" aria-label="twitter">
+                    <svg class="card__icon" width="20" height="20">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="card__item--black">
+                  <a class="card__link--white link" href="" aria-label="facebook">
+                    <svg class="card__icon" width="20" height="20">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="card__item--black">
+                  <a class="card__link--white link" href="" aria-label="linkedin">
+                    <svg class="card__icon" width="20" height="20">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="footer__item--tablet">
           <p class="footer__text">Підпишіться на розсилку</p>
           <div class="form__wrap--footer">
             <form class="form__footer">

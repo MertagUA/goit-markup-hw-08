@@ -42,20 +42,17 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__list--main {
-    @include tablet{
-        display: flex;
-        flex-wrap: wrap;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+        display: none;
     }
     @include desktop{
-        flex-wrap: nowrap;
+        display: flex;
+        justify-content: center;
     }
 }
 .footer__item--primary {
     @media screen and (max-width: 767px){
         margin-bottom: 60px;
-    }
-    @include tablet{
-        margin-left: 74px;;
     }
     @include desktop{
         margin-left: 0;
@@ -68,10 +65,6 @@
             &:last-child {
                     margin-bottom: 0;
             }
-    }
-    @include tablet {
-            margin-left: 135px;
-            margin-right: 74px;
     }
     @include desktop{
         margin-left: 0;
@@ -159,7 +152,7 @@
 }
 
 .form__button--wrap {
-    @media screen and (max-width: 1199px){
+    @media screen and (max-width: 1200px){
             display: inline-block;
         }
     position: relative;
@@ -182,10 +175,22 @@
     background-color: var(--acent-color);
     color: var(--primary-white-color);
 }
-
+.footer__list--tablet{
+    @media screen and (max-width: 678px){
+        display: none;
+    }
+    @media screen and (min-width:1200px){
+        display: none;
+    }
+}
 .form__icon--footer {
     position: absolute;
     top: 50%;
     right: 28px;
     transform: translateY(-50%);
+}
+.tablet__list{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
 }
