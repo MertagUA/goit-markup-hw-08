@@ -12,9 +12,19 @@
     text-align: center;
     background-color: #c4c4c4;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/img-hero480.jpg');
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img-hero480b.jpg');
+        }
     @include tablet{
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url('../images/img-hero768.jpg');
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url('../images/img-hero768b.jpg');
+        }
     }
     @include desktop{
         height: 600px;
@@ -22,9 +32,13 @@
         padding-bottom: 200px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url('../images/img-hero1600.jpg');
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('../images/img-hero1600b.jpg');
+        }
    }
 }
-
 .hero__title {
     text-transform: uppercase;
     text-align: center;
